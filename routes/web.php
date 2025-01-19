@@ -22,6 +22,7 @@ Route::get('/', function () {
     return view('main');
 });
 
+
 Route::group(['prefix' => 'doctor'], function() {
 	Route::group(['middleware' => 'doctor.guest'], function(){
         Route::view('login','Doctor.login')->name('doctor.login');
